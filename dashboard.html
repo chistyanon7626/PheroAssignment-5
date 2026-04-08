@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Github Issues Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-[#F8FAFC] ">
+
+
+<!-- navbar -->
+ <section class="flex justify-center bg-white shadow-sm mb-5">
+  <div class="navbar w-full max-w-[1440px] px-4 md:px-20 py-4">
     
+    <div class="flex-1">
+      <h1 class="text-lg md:text-xl font-bold flex items-center gap-2">
+        <img class="h-8 w-8" src="./assets/github-logo.png" alt="Logo">
+        GitHub Issues Tracker
+      </h1>
+    </div>
+
+    <div class="flex gap-2">
+      <input 
+        id="search" 
+        type="text" 
+        placeholder="Search..." 
+        class="input input-bordered w-24 sm:w-40 md:w-auto" 
+      />
+      <button 
+        onclick="searchIssues()" 
+        class="btn bg-[#4A00FF] hover:bg-[#3700cc] text-white border-none"
+      >
+        Search
+      </button>
+    </div>
+
+  </div>
+</section>
+    <!-- issues counter -->
+      
+    <script src="script.js"></script>
 </body>
 </html>
