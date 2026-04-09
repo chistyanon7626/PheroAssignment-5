@@ -85,7 +85,7 @@ function renderIssues(issues) {
 
                 <p class="text-sm text-gray-500 line-clamp-2 leading-relaxed mb-4">${issue.description}</p>
                 
-                <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center text-[10px] text-gray-400">
+                <div class="mt-auto pt-4 border-t border-gray-100 flex flex-col  gap-2 text-[10px] text-gray-700">
                     <span class="font-medium">#${issue.id} by ${issue.author}</span>
                     <span class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
