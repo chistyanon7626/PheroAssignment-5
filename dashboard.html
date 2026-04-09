@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Issues Tracker</title>
-    <link rel="icon" type="image/x-icon" href="./assets/github-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issues Tracker</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-[#F8FAFC] ">
-
-
-<!-- navbar -->
+  <!-- navbar -->
  <section class="flex justify-center bg-white shadow-sm mb-5">
   <div class="navbar w-full max-w-[1440px] px-4 md:px-20 py-4">
     
@@ -39,7 +38,8 @@
 
   </div>
 </section>
-    <!-- issues counter -->
+
+   <!-- issues counter -->
   <section class="p-5 max-w-[1300px] mx-auto px-4 md:px-0 shadow-sm bg-[#FBFBFB] ">
     <div class="w-max-[1200px] mx-auto shadow-sm">
 
@@ -81,7 +81,19 @@
   <div id="spinner" class="text-center hidden">
     <span class="loading loading-spinner loading-lg"></span>
   </div>
-      
-    <script src="script.js"></script>
+
+  <div id="container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+
+  <dialog id="my_modal" class="modal">
+    <div class="modal-box" id="modal-content"></div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+  </div>
+  </section>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

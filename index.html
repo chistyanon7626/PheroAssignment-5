@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Tailwind + DaisyUI -->
+  <meta charset="UTF-8">
+  <title>Login</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="./assets/github-logo.png">
+   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="flex items-center justify-center h-screen bg-[#F8FAFC] ">
-   
+
   <div class="card w-3/12 bg-white shadow-xl p-6">
 
     <img class=" mx-auto" src="./assets/github-logo.png" alt="github logo" />
@@ -45,8 +43,10 @@
     </div>
 
   </div>
-  <script > 
-  function login() {
+
+  <!-- login functionality -->
+  <script>
+    function login() {
       const user = document.getElementById("username").value.trim();
       const pass = document.getElementById("password").value.trim();
       const error = document.getElementById("error");
@@ -60,19 +60,19 @@
       // Validate credentials
       if (user === "admin" && pass === "admin123") {
         localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
       } else {
         error.innerText = "Invalid credentials!";
       }
     }
 
-   // Optional: press Enter to login
+    // Optional: press Enter to login
     document.addEventListener("keydown", function(e) {
       if (e.key === "Enter") {
         login();
       }
     });
-    </script>
-    
+  </script>
+
 </body>
 </html>
