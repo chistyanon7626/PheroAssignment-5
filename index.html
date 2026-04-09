@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
     <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="./assets/github-logo.png">
 </head>
 <body class="flex items-center justify-center h-screen bg-[#F8FAFC] ">
    
@@ -44,7 +45,34 @@
     </div>
 
   </div>
-  <script src="./login.js"></script>
+  <script > 
+  function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const error = document.getElementById("error");
+
+      // Check empty fields
+      if (!user || !pass) {
+        error.innerText = "Please fill in all fields!";
+        return;
+      }
+
+      // Validate credentials
+      if (user === "admin" && pass === "admin123") {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "index.html";
+      } else {
+        error.innerText = "Invalid credentials!";
+      }
+    }
+
+   // Optional: press Enter to login
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        login();
+      }
+    });
+    </script>
     
 </body>
 </html>
