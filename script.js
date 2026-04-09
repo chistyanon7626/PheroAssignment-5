@@ -85,17 +85,16 @@ function renderIssues(issues) {
 
                 <p class="text-sm text-gray-500 line-clamp-2 leading-relaxed mb-4">${issue.description}</p>
                 
-                <div class="mt-auto pt-4 border-t border-gray-100 flex flex-col  gap-2 text-[10px] text-gray-700">
-                    <span class="font-medium">#${issue.id} by ${issue.author}</span>
-                    <span class="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        ${new Date(issue.createdAt).toLocaleDateString()}
-                    </span>
-                </div>
-            </div>
-        `;
+                            <div class="mt-auto pt-4 border-t border-gray-100 flex flex-col  gap-2 text-[10px] text-gray-700">
+                                <span class="font-medium">#${issue.id} by ${issue.author}</span>
+                                <span class="flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    ${new Date(issue.createdAt).toLocaleDateString()}
+                                </span>
+                            </div>
+                        </div> `;
         
         card.onclick = () => openModal(issue);
         container.appendChild(card);
@@ -119,11 +118,11 @@ function openModal(issue) {
         .map(l => `<div class="badge badge-soft border-current text-[10px]">${l.toUpperCase()}</div>`)
         .join("");
 
-    content.innerHTML = `
-        <h3 class="text-lg font-bold text-gray-800">${issue.title}</h3>
-        
-       <div class="flex items-center gap-4 py-4">
-    <div class="badge ${statusBadge}">${statusText}</div>
+            content.innerHTML = `
+                <h3 class="text-lg font-bold text-gray-800">${issue.title}</h3>
+                
+            <div class="flex items-center gap-4 py-4">
+            <div class="badge ${statusBadge}">${statusText}</div>
 
     <div class="flex items-center gap-2 text-sm text-gray-500"> 
         <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
